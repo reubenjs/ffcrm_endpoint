@@ -8,7 +8,7 @@ module FfcrmEndpoint
       if endpoint.authenticate
         begin
           endpoint.process
-          respond_with('', location: nil, status: 201)
+          respond_with('', location: nil, status: 200)
         rescue RuntimeError => e
           respond_with(e.message, location: nil, status: 500)
         end
